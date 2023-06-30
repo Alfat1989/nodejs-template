@@ -16,12 +16,12 @@ const login = async (req, res) => {
     throw new Unauthorized("Password wrong");
   }
   const payload = {
-    id: user.id,
+    id: user._id,
   };
 
   const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "1h" });
   res.json({
-    status: "success",
+    status: " success",
     code: 200,
     data: {
       token,
