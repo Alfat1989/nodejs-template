@@ -17,6 +17,10 @@ const userSchema = Schema(
       required: [true, "Email is required"],
       unique: true,
     },
+    token: {
+      type: String,
+      default: null,
+    },
   },
   { versionKey: false, timestamps: true }
 );
